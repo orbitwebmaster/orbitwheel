@@ -1,0 +1,5 @@
+Installation instructions to orbitwheel
+
+1 - replace functions.php file in Divi Theme directory
+2 -  Unzip file orbitwheel.zip into ˜/wp-content/themes/Divi
+3 - Create shortcode [orbitwebwinwheel] into pages or post to check the wheel plugin
