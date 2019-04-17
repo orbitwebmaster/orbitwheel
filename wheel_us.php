@@ -83,6 +83,7 @@
         position: absolute;
         z-index: 3;
         width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .orbit-button {
@@ -184,9 +185,9 @@
 </script>
 <div id="dv-congratulations">
     <label id="msg-win" class="animated rotateIn delay-5s">Congratulations, you've won! </label><label id="gift" class="animated infinite flash delay-5s"></label>
-    <div>
+   <!--  <div>
     <a href="" class="orbit-button" id="reset-button" onclick="resetWheel();">Spin Again?</a>     
-    </div>
+    </div> -->
 </div>
 <div id="fireworks-container"> 
 </div>
@@ -382,6 +383,9 @@
                 //playButton.innerHTML = 'Tourne encore?';
                 //playButton.setAttribute('onClick', 'resetWheel();');
                  playButton.style.visibility = 'hidden';
+                 setTimeout(function(){
+                    resetWheel();
+                 },5000);//5000 millisecond
             }
 
             function alertPrize(indicatedSegment) {
@@ -395,7 +399,6 @@
                 } else {
                     congrats.style.visibility =  'visible';
                     gift.innerHTML = indicatedSegment.text;
-                    $("#dv-congratulations label").animate({fontSize: '1.4em'});
                      $("#dv-congratulations label").animate({fontSize: '1.4em'});
                      let audio = new Audio("https://oct.bm3group.com/wp-content/plugins/orbitwheel/wingamesound.wav");
                      audio.play();
